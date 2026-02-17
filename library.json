@@ -1,0 +1,14 @@
+{
+  "name": "KeyPad",
+  "version": "1.0.0",
+  "license": "Unlicense",
+  "keywords": "keypad, 4x4, esp, pin, arduino",
+  "description": "Use keypad 4x4 on your esp",
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/DeathManOne/KeyPad4x4"
+  },
+  "frameworks": "arduino",
+  "platforms": ["espressif32"]
+}
