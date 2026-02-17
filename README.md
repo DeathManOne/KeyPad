@@ -1,5 +1,5 @@
 
-# KeyPad 4x4 (or 4x3) for arduino, ESP32
+# KeyPad 4x4 maximum for arduino, ESP32
 - Does it works with RaspberryPi ?
 ## Initialization
 ```c++
@@ -28,3 +28,4 @@ if (tapedKey)
   { Serial.println(c); }
 else { Serial.println("Timeout"); }
 ```
+
