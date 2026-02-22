@@ -13,9 +13,9 @@ class KeyPad {
             {'*','0','#','D'}
         };
         std::vector<int> *_PINS_COLUMNS, *_PINS_ROWS;
-        int getRow() const;
-        int getColumn(int rowValue) const;
-        void clear() const;
+        int _getRow() const;
+        int _getColumn(int rowValue) const;
+        void _clear() const;
     public:
         /**
          * @brief constructor
