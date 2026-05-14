@@ -1,14 +1,29 @@
 {
   "name": "KeyPad",
   "version": "1.0.0",
-  "license": "Unlicense",
-  "keywords": "keypad, 4x4, esp, pin, arduino",
-  "description": "Use keypad 4x4 on your esp",
+  "license": "GPL-3.0-or-later",
+  "description": "Simple ESP32 keypad library supporting 4x3 and 4x4 matrix keypads with timeout, validation and release handling.",
+  "keywords": ["keypad", "keyboard", "matrix", "4x3", "4x4", "esp32", "arduino", "gpio", "input"],
   "repository":
   {
     "type": "git",
-    "url": "https://github.com/DeathManOne/KeyPad4x4"
+    "url": "https://github.com/DeathManOne/KeyPad"
   },
+  "authors": [
+    {
+      "name": "DeathManOne",
+      "url": "https://github.com/DeathManOne",
+      "maintainer": true
+    }
+  ],
   "frameworks": "arduino",
-  "platforms": ["espressif32"]
+  "platforms": ["espressif32"],
+  "headers": [
+    "keypad.h"
+  ],
+  "dependencies": [],
+  "build": {
+    "includeDir": "include",
+    "srcDir": "src"
+  }
 }
