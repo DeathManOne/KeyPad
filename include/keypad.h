@@ -1,5 +1,5 @@
 /*
- * keypad.cpp
+ * keypad.h
  *
  * Copyright (c) 2026 DeathManOne
  * https://github.com/DeathManOne
@@ -29,26 +29,25 @@
 
 class KeyPad {
     private:
-        static constexpr char KEYPAD_4X4[4][4] = {
-            {'1','2','3','A'},
-            {'4','5','6','B'},
-            {'7','8','9','C'},
-            {'*','0','#','D'}
-        };
+        bool _VALID = false;
+        std::vector<int> _PINS_ROWS = {};
+        std::vector<int> _PINS_COLUMNS = {};
         static constexpr char KEYPAD_4X3[4][3] = {
             {'1','2','3'},
             {'4','5','6'},
             {'7','8','9'},
             {'*','0','#'}
         };
-
-        std::vector<int> *_PINS_COLUMNS, *_PINS_ROWS;
-        bool *_VALID;
+        static constexpr char KEYPAD_4X4[4][4] = {
+            {'1','2','3','A'},
+            {'4','5','6','B'},
+            {'7','8','9','C'},
+            {'*','0','#','D'}
+        };
         int _getRow() const;
         int _getColumn(int rowValue) const;
         int _getKeyValue(int rowValue, int columnValue) const;
         void _clear() const;
-
     public:
         /**
          * @brief constructor
@@ -70,13 +69,13 @@ class KeyPad {
         /**
          * @brief destructor
          */
-        ~KeyPad();
+        ~KeyPad() { this->_clear(); }
 
         /**
          * @brief check if keypad configuration is valid
          * @return true if keypad is valid, otherwise false
          */
-        inline bool isValid() const { return *this->_VALID; }
+        inline bool isValid() const { return this->_VALID; }
 
         /**
          * @brief wait for key press
